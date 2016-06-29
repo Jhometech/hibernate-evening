@@ -11,9 +11,9 @@ public class InsertStudent {
 		Student s1 = new Student();
 		s1.setName("Ramesh");
 		s1.setPhone("99778887766");
-		s1.setStdId(3);
+		s1.setStdId(11);
 		Transaction tx = session.beginTransaction();
-		session.persist(s1);// internally it executes insert query
-		tx.commit();
+		session.save(s1);
+		session.flush();
 	}
 }

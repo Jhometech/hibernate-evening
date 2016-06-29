@@ -13,6 +13,8 @@
 		<property name="hbm2ddl.auto">update</property>
 		<property name="show_sql">true</property>
 		<mapping class="in.javahome.hibernate.crud.Student" />
+		<mapping class="in.javahome.hibernate.onetoone.Employee" />
+		<mapping class="in.javahome.hibernate.onetoone.Passport" />
 	
 	</session-factory>
 </hibernate-configuration>
