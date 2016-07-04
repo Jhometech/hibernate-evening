@@ -17,6 +17,10 @@
 		<mapping class="in.javahome.hibernate.onetoone.Passport" />
 		<mapping class="in.javahome.hibernate.onetomany.Person" />
 		<mapping class="in.javahome.hibernate.onetomany.Address" />
+		
+		<mapping class="in.javahome.hibernate.manytomany.Author" />
+		<mapping class="in.javahome.hibernate.manytomany.Book" />
+		
 	
 	</session-factory>
 </hibernate-configuration>
