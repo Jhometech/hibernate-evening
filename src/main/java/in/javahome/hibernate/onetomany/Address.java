@@ -1,5 +1,6 @@
 package in.javahome.hibernate.onetomany;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,7 +20,7 @@ public class Address {
 	private String state;
 	@Column(name = "CITY")
 	private String city;
-	@ManyToOne
+	@ManyToOne(cascade=CascadeType.PERSIST)
 	@JoinColumn(name="PERSON_ID")
 	private Person person;
 	public Integer getAddressId() {

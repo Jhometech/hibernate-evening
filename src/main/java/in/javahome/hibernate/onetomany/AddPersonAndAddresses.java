@@ -26,7 +26,7 @@ public class AddPersonAndAddresses {
 
 		session.save(a1);
 		session.save(a2);
-		session.save(p1);
+//		session.save(p1);
 		tx.commit();
 		session.close();
 	}

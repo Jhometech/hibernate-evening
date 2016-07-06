@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,7 +20,7 @@ public class Book implements Serializable{
 	private Integer bookId;
 	private String name;
 	private Double cost;
-	@ManyToMany(mappedBy="books")
+	@ManyToMany(mappedBy="books",cascade=CascadeType.ALL)
 	private Set<Author> authors = new HashSet<>();
 	public Integer getBookId() {
 		return bookId;

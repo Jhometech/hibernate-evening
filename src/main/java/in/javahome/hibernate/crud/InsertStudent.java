@@ -11,9 +11,9 @@ public class InsertStudent {
 		Student s1 = new Student();
 		s1.setName("Ramesh");
 		s1.setPhone("99778887766");
-		s1.setStdId(11);
+		s1.setStdId(1);
 		Transaction tx = session.beginTransaction();
 		session.save(s1);
-		session.flush();
+		tx.commit();
 	}
 }
