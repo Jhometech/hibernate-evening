@@ -8,7 +8,7 @@ public class UpdateStudent {
 		try (Session session = HibUtil.getSession()) {
 			Transaction tx = session.beginTransaction();
 			Student std = session.get(Student.class, 1);
-			std.setPhone("8888888888");
+			std.setPhone("999999999");
 			std.setName("Kishore");
 			session.update(std);
 			tx.commit();
