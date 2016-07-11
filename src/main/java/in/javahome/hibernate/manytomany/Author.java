@@ -12,10 +12,15 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "AUTHOR")
+@NamedQueries(value = {
+		@NamedQuery(name = "xyz", 
+				query = "from Author a where a.authorName=:name or a.authorName!=:name") })
 public class Author implements Serializable {
 	@Column(name = "AUTH_ID")
 	@Id

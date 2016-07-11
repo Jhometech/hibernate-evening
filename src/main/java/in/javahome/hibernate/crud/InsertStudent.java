@@ -9,9 +9,9 @@ public class InsertStudent {
 		Session session = HibUtil.getSession();
 
 		Student s1 = new Student();
-		s1.setName("Ramesh");
+		s1.setName("Harish");
 		s1.setPhone("99778887766");
-		s1.setStdId(1);
+		s1.setStdId(2);
 		Transaction tx = session.beginTransaction();
 		session.save(s1);
 		tx.commit();

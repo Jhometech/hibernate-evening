@@ -7,12 +7,10 @@ public class UpdateStudent {
 	public static void main(String[] args) {
 		try (Session session = HibUtil.getSession()) {
 			Transaction tx = session.beginTransaction();
-			Student std = session.get(Student.class, 3);
-			Student std2 = new Student();
-			std2.setPhone("8888888888");
-			std2.setName("Kishore");
-			std2.setStdId(3);
-			session.merge(std2);
+			Student std = session.get(Student.class, 1);
+			std.setPhone("8888888888");
+			std.setName("Kishore");
+			session.update(std);
 			tx.commit();
 		}
 	}
