@@ -26,8 +26,9 @@
 
 		<mapping class="in.javahome.hibernate.manytomany.Author" />
 		<mapping class="in.javahome.hibernate.manytomany.Book" />
-
-		
+		<mapping class="in.javahome.hibernate.inheritance.CashPayment" />
+		<mapping class="in.javahome.hibernate.inheritance.CardPayment" />
+		<mapping class="in.javahome.hibernate.inheritance.ChequePayment" />
 
 	</session-factory>
 </hibernate-configuration>
